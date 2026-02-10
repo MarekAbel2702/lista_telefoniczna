@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startowyFragment">
+
+    <fragment
+        android:id="@+id/startowyFragment"
+        android:name="com.example.listatelefoniczna.startowyFragment"
+        android:label="Start">
+
+        <action
+            android:id="@+id/action_startowyFragment_to_listFragment"
+            app:destination="@+id/listFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.listatelefoniczna.ListaFragment"
+        android:label="Lista">
+
+        <action
+            android:id="@+id/action_fragmentLista_to_fragmentFormularz"
+            app:destination="@+id/formularzFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formularzFragment"
+        android:name="com.example.listatelefoniczna.FormularzFragment"
+        android:label="Formularz" />
+
+</navigation>
